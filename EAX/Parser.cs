@@ -80,9 +80,15 @@ namespace EAX
                         break;
                     case TokenType.TEOF:
                         Flush();
-                        var tags = new List<TagOpen>();
-                        while (Main.Count > 0 && Main.Peek() is TagOpen)
-                            tags.Add(Main.Pop() as TagOpen);
+                        var tags = new List<TagEvent>();
+                        foreach (Name name in Main)
+                        {
+                            Console.WriteLine(name.value);
+                        }
+
+                        
+                        while (Main.Count > 0 && Main.Peek() is TagEvent)
+                            tags.Add(Main.Pop() as TagEvent);
                         tags.Reverse();
                         Push(new EngagedXmlDoc(tags));
                         break;

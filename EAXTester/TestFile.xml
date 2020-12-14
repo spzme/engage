@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentElement param="value">
+    <FirstElement>
+        &#xb6; Some Text
+    </FirstElement>
+    <?some_pi some_attr="some_value"?>
+    <SecondElement param2="something">
+        Pre-Text <Inline>Inlined text</Inline> Post-text.
+    </SecondElement>
+</DocumentElement>
