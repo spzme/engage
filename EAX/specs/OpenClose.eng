@@ -1,5 +1,6 @@
 % EAX: Engage! API for XML
-namespace EAX
+% OpenClose: generate a list of TagOpen/TagClose objects
+namespace EaxOpenClose
 
 types
     EngagedXmlDoc;
@@ -18,7 +19,7 @@ handlers
     '<'                 -> lift TAG
     '<'                 -> lift OPEN
     '/' upon TAG        -> lift CLOSE
-%    '/' upon TAG        -> drop OPEN
+    '/' upon TAG        -> drop OPEN
     Id upon TAG         -> push Name(this)
     '>' upon OPEN       -> push TagOpen(n)
                            where n := pop Name
