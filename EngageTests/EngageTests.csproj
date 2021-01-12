@@ -24,7 +24,10 @@
     <ProjectReference Include="..\AB\AB.csproj" />
     <ProjectReference Include="..\EAX\EAX.csproj" />
     <ProjectReference Include="..\Engage\Engage.csproj" />
-    <ProjectReference Include="..\TIALAA\TIALAA.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests.cs" />
   </ItemGroup>
 
 </Project>
